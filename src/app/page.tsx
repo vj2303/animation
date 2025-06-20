@@ -7,8 +7,7 @@ import { CameraControls } from '../components/CameraControls';
 import { PathRenderer } from '../components/PathRenderer';
 import { AnimationManager } from '../components/AnimationManager';
 import { InputHandler } from '../components/InputHandler';
-import { UIOverlay } from '../components/UIOverlay';
-import { EnhancedAudioManager, SimpleAudioManager } from '../components/EnhancedAudioManager';
+import { SimpleAudioManager } from '../components/EnhancedAudioManager';
 import { useGSAP } from '../hooks/useGSAP';
 
 export default function DottedPath() {
@@ -211,8 +210,6 @@ export default function DottedPath() {
       />
       
       <SimpleAudioManager />
-      
-      {/* <UIOverlay currentPosition={currentPosition} /> */}
     </div>
   );
 }

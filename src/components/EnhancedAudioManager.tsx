@@ -34,7 +34,7 @@ export function SimpleAudioManager() {
       document.removeEventListener('touchstart', handleFirstInteraction);
       audio.pause();
     };
-  }, []);
+  }, [hasUserInteracted]);
 
   const playAudio = async () => {
     if (audioRef.current) {

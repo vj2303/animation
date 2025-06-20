@@ -75,7 +75,7 @@ export function InputHandler({ snapToAgent, isSnappingRef }) {
       document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [snapToAgent, isSnappingRef]);
+  }, [handleKeyDown, handleScroll, handleTouchEnd, handleTouchMove]);
 
   return null; // This component only handles events
 }
