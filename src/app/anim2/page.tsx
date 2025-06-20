@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import styles from './HorizontalScroll.module.css';
+// import styles from './HorizontalScroll.module.css';
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
