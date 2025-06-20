@@ -1,0 +1,71 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #f3f4f6, #dbeafe, #bfdbfe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Add a subtle vignette effect */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.1) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.perspectiveWrapper {
+  position: absolute;
+  inset: 0;
+  transform: rotateX(75deg);
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+.dotRow {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  background-color: #4b5563;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-out;
+}
+
+.dot:hover {
+  background-color: #6b7280;
+  transform: scale(1.1);
+}
+
+.instructions {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #374151;
+  font-size: 14px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
